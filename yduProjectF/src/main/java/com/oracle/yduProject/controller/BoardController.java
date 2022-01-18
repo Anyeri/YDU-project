@@ -20,14 +20,13 @@ import com.oracle.yduProject.service.CommentService;
 import com.oracle.yduProject.service.Paging;
 @Controller
 public class BoardController {
-
    @Autowired
    private BoardService bs;
    @Autowired
    private CommentService comm;
 
-   //*** 전체 공지사항 게시판 시작 ***
-    @RequestMapping("notiList")
+   //전체 공지사항 게시판 시작
+   @RequestMapping("notiList")
    public String notiList(HttpServletRequest request, Board board, String currentPage, Model model) {
        HttpSession session = request.getSession();
       try {
@@ -44,8 +43,8 @@ public class BoardController {
          int total = bs.total(board.getB_type());
          Paging page = new  Paging(total, currentPage);
          System.out.println("paging toString:::::" + page.toString());
-         board.setStart(page.getStart());
-         board.setEnd(page.getEnd());
+         board.setStart(page.getStart());//페이지의 처음
+         board.setEnd(page.getEnd());//페이지의 끝
          //noti List
          List<Board> boardList = bs.boardList(board);
          System.out.println("BoardController notiList boardList" + boardList);
@@ -58,12 +57,11 @@ public class BoardController {
             DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             String strNow = now.format(fmt);
             model.addAttribute("today", strNow);
-            
             System.out.println("boardListSize" + boardList.size());
-            model.addAttribute("total", total); //page total
+            model.addAttribute("total", total); //page의 total
             model.addAttribute("boardList", boardList);
             model.addAttribute("page", page);
-            model.addAttribute("boardListSize", boardList.size());
+            model.addAttribute("boardListSize", boardList.size());//데이터 없음 처리를 위하여 데이터의 크기를 구함 0이면 없음처리
             System.out.println(boardList.toString());
          }
          return "notiList";
@@ -88,7 +86,7 @@ public class BoardController {
       }
    }
    
-   //공지사항 작성
+   //전체 공지사항 작성
    @RequestMapping("notiWrite")
    @ResponseBody
    public String notiWrite(Board board, Model model) {
@@ -98,7 +96,7 @@ public class BoardController {
          return str;
       }
    
-   //공지사항 수정 폼
+   //전체 공지사항 수정 폼
    @RequestMapping("notiUpdateForm")
    public String notiUpdateForm(HttpServletRequest request, Board board, Model model) {
       HttpSession session = request.getSession();
@@ -108,21 +106,21 @@ public class BoardController {
          String id = (String) session.getAttribute("sessionId");
          Board notiBoardInfo = bs.notiBoardInfo(board);
          model.addAttribute("notiBoardInfo", notiBoardInfo);
-         return "notiUpdateForm"; //view resolver를 통해서 이동
+         return "notiUpdateForm";
       } catch (Exception e) {
          return "sessionIsNull";
       }
    }
    
-   //공지사항 수정
+   //전체 공지사항 수정
    @RequestMapping("notiUpdate")
-   @ResponseBody   //Ajax 를 쓰기위해 ResponseBody 어노테이션 사용
+   @ResponseBody
    public int notiUpdate(Board board) { //나중에 String 으로 바꿔주기. Ajax 때문에 int로 선언.
       int result = bs.notiUpdate(board);
       
       return result;
    }
-   //공지사항 컨텐츠
+   //전체 공지사항 목록보기
    @RequestMapping("notiContent")
    public String notiContent(HttpServletRequest request, Board board,B_Comment comment,Model model) {
       HttpSession session = request.getSession();
@@ -131,9 +129,8 @@ public class BoardController {
          int autority = (int) session.getAttribute("sessionAutority");
          String id = (String) session.getAttribute("sessionId");
          System.out.println("***BoardController notiContent Start***");
-   
          System.out.println("notiContent b_num::::"+board.getB_num());
-         System.out.println("notiContent b_type::::"+board.getB_type());      
+         System.out.println("notiContent b_type::::"+board.getB_type());
          //Content
          Board boardList = bs.boardContent(board);
          //Comment List
@@ -141,13 +138,10 @@ public class BoardController {
          int clSize = commentList.size();
          System.out.println("BoardController noticontent [댓글 리스트 실행]:::::: " + commentList);
          System.out.println("commentList toString()" + commentList.toString());
-   
          model.addAttribute("boardContent", boardList);
          model.addAttribute("commentList", commentList);
          model.addAttribute("clSize",clSize);
-         
          System.out.println("notiContent boardList " + boardList.toString());
-   
          return "notiContent";
       } catch (Exception e) {
          return "sessionIsNull";
@@ -164,9 +158,8 @@ public class BoardController {
       return result;
    }
    
-   // -----------------수업 공지사항 게시판 시작 -----------------
-   
-   //수업 공지사항 리스트
+   //***수업 공지사항 게시판 시작***
+   //수업 공지사항 목록
    @RequestMapping("classNotiList")
    public String classNotiList(HttpServletRequest request, Board board, String currentPage, Model model) {
       HttpSession session = request.getSession();
@@ -188,13 +181,11 @@ public class BoardController {
          if(classBoardList == null) {
             model.addAttribute("classBoardListSize", 0);
          } else {
-            
             //new icon 오늘 날짜 구하기
             LocalDate now = LocalDate.now();
-            DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");//2021-12-14 형식으로 나오도록 함
             String strNow = now.format(fmt);
             model.addAttribute("today", strNow);
-            
             model.addAttribute("total", total);
             model.addAttribute("classBoardList", classBoardList);
             model.addAttribute("page", page);
