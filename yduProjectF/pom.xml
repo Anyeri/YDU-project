@@ -32,14 +32,9 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.2.0</version>
 		</dependency>
-		<!--<dependency> 
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<artifactId>sample-project</artifactId>
-		<name>sample-project</name>
-		<packaging>war</packaging> -->
+		<!--<dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
+			<scope>provided</scope> </dependency> <artifactId>sample-project</artifactId> 
+			<name>sample-project</name> <packaging>war</packaging> -->
 		<!-- <dependency> 6버전을 쓰려고 8버전 막아뒀음 <groupId>com.oracle.database.jdbc</groupId> 
 			<artifactId>ojdbc8</artifactId> <scope>runtime</scope> </dependency> -->
 		<dependency>
@@ -76,12 +71,6 @@
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
-		<!-- Mail -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mail</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
