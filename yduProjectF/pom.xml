@@ -31,7 +31,7 @@
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.2.0</version>
-		</dependency>
+		</dependency> 
 		<!--<dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
 			<scope>provided</scope> </dependency> <artifactId>sample-project</artifactId> 
 			<name>sample-project</name> <packaging>war</packaging> -->
