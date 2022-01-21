@@ -16,7 +16,7 @@
 <link href="img/favicon.ico" rel="icon">
 <!-- Bootstrap core CSS -->
 <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!--external css-->
+<!--external css--> 
 <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="css/zabuto_calendar.css">
 <!-- Custom styles for this template -->
