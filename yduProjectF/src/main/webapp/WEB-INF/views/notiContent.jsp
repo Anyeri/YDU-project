@@ -14,7 +14,6 @@
 <title>YDU 전체 공지사항 상세조회</title>
 <!-- Favicons -->
 <link href="img/favicon.ico" rel="icon">
-<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 <!-- Bootstrap core CSS -->
 <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!--external css-->
@@ -66,10 +65,7 @@ function backDelete(b_num,b_type) {
          }
       })
    }   
-   
 }
-
-
 //전체 공지게시판 댓글 수정 Ajax
 function commUpdate(c_num) {
    if(confirm("댓글을 수정하시겠습니까?") == true){
@@ -91,7 +87,6 @@ function commUpdate(c_num) {
                alert("댓글 수정에 실패하였습니다.");
                location.reload();
             }
-         
          }
       })
     }else{
@@ -146,20 +141,17 @@ function commDelete(c_num){
       return;
    }
 }
-
+//수업 공지사항 댓글 수정폼
 function commUpdateForm(c_num){
    event.preventDefault();
    var id = "${sessionScope.sessionId}";
    var name = "${sessionScope.sessionName}"
    var b_num = $('#b_num').val();
-/*    var c_num = $('#c_num').val(); */
    var b_type = $('#b_type').val();
    var c_w_date = $('#c_w_date').val();
    var c_content = $('#c_content').val();
 
    var htmls = "";
-/*    b_num = document.getElementById("b_num").value;
- */
    htmls += '<div id="id'+c_num+'">';
    htmls += '<table>';
    htmls += '<tr>';
@@ -183,7 +175,6 @@ function commUpdateForm(c_num){
    htmls += '</div>';
    $('#id'+c_num).replaceWith(htmls);
 }
-
 </script>
 </head>
 <%@include file="header.jsp"%>
@@ -212,8 +203,8 @@ function commUpdateForm(c_num){
                      <hr>
                      <!-- 공지사항 목록 --> 
                      <!-- id 를 hidden 에다가 걸어버리면 보안상 문제가 생길 수 있다.
-                         예를 들어서, kd1(학생) id로 로그인했는데 소스코드에서 id 값이 노출되므로 임의로 hailey(관리자)로 바꿀 수가 있다.
-                         이를 막기위해 id는 input hidden 으로 걸지말고 Jquery단 Ajax 에 있는  var id = "${sessionScope.sessionId}"; 로 선언하여 jsp 단에서만 보이게끔 해야한다 -->
+                        	 예를 들어서, kd1(학생) id로 로그인했는데 소스코드에서 id 값이 노출되므로 임의로 hailey(관리자)로 바꿀 수가 있다.
+                        	 이를 막기위해 id는 input hidden 으로 걸지말고 Jquery단 Ajax 에 있는  var id = "${sessionScope.sessionId}"; 로 선언하여 jsp 단에서만 보이게끔 해야한다 -->
                      <%-- <input type="hidden" id="id" name="id" value="${sessionScope.sessionId }"> --%>
                      <input type="hidden" id="b_num" name="b_num" value="${boardContent.b_num }">
                      <input type="hidden" id="b_type" name="b_type" value="${boardContent.b_type }">
@@ -221,12 +212,9 @@ function commUpdateForm(c_num){
                         <thead>
                            <tr>
                               <th width="300">${boardContent.b_title }</th>
-                              <th width="120"><i class="fa fa-user"></i>&nbsp;
-                                 작성자&ensp;${boardContent.name }</th>
-                              <th width="100"><i class="fa fa-clock-o"></i>&nbsp;
-                                 작성일&ensp;${boardContent.b_w_date }</th>
-                              <th width="100"><i class="fa fa-eye"></i>&nbsp;
-                                 &ensp;${boardContent.b_view }</th>
+                              <th width="120"><i class="fa fa-user"></i>&nbsp;작성자&ensp;${boardContent.name }</th>
+                              <th width="100"><i class="fa fa-clock-o"></i>&nbsp;작성일&ensp;${boardContent.b_w_date }</th>
+                              <th width="100"><i class="fa fa-eye"></i>&nbsp;&ensp;${boardContent.b_view }</th>
                            </tr>
                         </thead>
                         <tbody>
@@ -242,11 +230,10 @@ function commUpdateForm(c_num){
                         <c:if test="${sessionScope.sessionId == boardContent.id || sessionScope.sessionAutority == 3}">
                            <button type="button" class="btn btn-danger" onclick="backDelete(${boardContent.b_num},${boardContent.b_type})">삭제</button>
                         </c:if>
-                           <!-- 목록은 아무나 다 사용가능 -->
+                           <!-- 목록은 모든 권한  사용가능 -->
                            <button type="button" class="btn btn-theme02" onclick="backList()">목록</button>
                      </div>
                      <hr>
-                     
                      <!-- 댓글 목록 폼  -->
                      <c:if test="${clSize > 0}">
                         <c:forEach var="commentList" items="${commentList }">
@@ -279,11 +266,6 @@ function commUpdateForm(c_num){
                                     </c:if>
                                  </td>
                               </tr>
-                              <%-- <tr>
-                                 <td colspan="2" width="515px">
-                                    <div id="commUpdateFormId${commentList.c_num }"></div>
-                                 </td>
-                              </tr> --%>
                            </table>
                            <div><hr></div>
                            </div>
@@ -292,16 +274,16 @@ function commUpdateForm(c_num){
                      <!-- 댓글 작성폼 -->
                       <table>
                         <tr>
-                        <td width="200px" style="text-align: left; vertical-align: top; ">　
-                        <font color=""><strong>작성자 </strong>${sessionScope.sessionName}</font></td>
-                        <td width="1000px">
-                        <textarea class="form-control" id="c_contentWrite" style="min-height: 100px; width: 100%" name="c_content" placeholder="댓글 작성을 해주세요."></textarea>
-                        <td width="165px" style="text-align: center">
-                           <button type="button" class="btn btn-info" onclick="commWrite()" style="margin-left: 15px;">작성하기</button>
-                        </td>
+	                        <td width="200px" style="text-align: left; vertical-align: top; ">　
+	                        	<font color="blue"><strong>작성자 </strong>${sessionScope.sessionName}</font>
+	                        </td>
+	                        <td width="1000px">
+	                        	<textarea class="form-control" id="c_contentWrite" style="min-height: 100px; width: 100%" name="c_content" placeholder="댓글 작성을 해주세요."></textarea>
+	                        <td width="165px" style="text-align: center">
+	                        	<button type="button" class="btn btn-info" onclick="commWrite()" style="margin-left: 15px;">작성하기</button>
+	                        </td>
                         </tr>
-                     </table>
-                     <hr>
+                     </table><hr>
                   </div>
                </div>
             </div>
