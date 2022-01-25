@@ -12,7 +12,7 @@
 <meta name="keyword"
    content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 <title>YDU 전체 공지사항 상세조회</title>
-<!-- Favicons -->  
+<!-- Favicons -->   
 <link href="img/favicon.ico" rel="icon">
 <!-- Bootstrap core CSS -->
 <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
