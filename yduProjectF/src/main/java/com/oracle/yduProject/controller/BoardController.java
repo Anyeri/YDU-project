@@ -54,7 +54,7 @@ public class BoardController {
 			if (boardList == null) {
 				model.addAttribute("boardListSize", 0);
 			} else {
-				// new icon 오늘 날짜 구하기  
+				// new icon 오늘 날짜 구하기
 				LocalDate now = LocalDate.now();
 				DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 				String strNow = now.format(fmt);
@@ -63,7 +63,7 @@ public class BoardController {
 				model.addAttribute("total", total); // page의 total
 				model.addAttribute("boardList", boardList);
 				model.addAttribute("page", page);
-				model.addAttribute("boardListSize", boardList.size());// 데이터 없음 처리를 위하여 데이터의 크기를 구함 0이면 없음처리
+				model.addAttribute("boardListSize", boardList.size());//데이터 없음 처리를 위하여 데이터의 크기를 구함 데이터 크기가 0일때 없음 처리
 				System.out.println(boardList.toString());
 			}
 			return "notiList";
