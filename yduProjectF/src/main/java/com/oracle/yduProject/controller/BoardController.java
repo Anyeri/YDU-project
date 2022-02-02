@@ -54,7 +54,7 @@ public class BoardController {
 			if (boardList == null) {
 				model.addAttribute("boardListSize", 0);
 			} else {
-				// new icon 오늘 날짜 구하기 
+				// new icon 오늘 날짜 구하기  
 				LocalDate now = LocalDate.now();
 				DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 				String strNow = now.format(fmt);
