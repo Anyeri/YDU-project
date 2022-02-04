@@ -182,7 +182,7 @@ public class BoardController {
 			System.out.println("BoardController classNotiList classBoardList" + classBoardList);
 			if (classBoardList == null) {
 				model.addAttribute("classBoardListSize", 0);
-			} else {
+			} else { 
 				// new icon 오늘 날짜 구하기
 				LocalDate now = LocalDate.now();
 				DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");// 2021-12-14 형식으로 나오도록 함
