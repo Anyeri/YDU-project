@@ -9,7 +9,7 @@
 </head>
 <body>
 <script type="text/javascript">
-	alert("잘못된 경로입니다.");
+	alert("WARNING! 잘못된 경로입니다!!");
 	history.back();
 </script>
 </body>
