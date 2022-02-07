@@ -175,7 +175,7 @@ public class BoardController {
 			int total = bs.total(board.getB_type());
 			Paging page = new Paging(total, currentPage);
 			System.out.println("paging toString:::::" + page.toString());
-			board.setStart(page.getStart());
+			board.setStart(page.getStart()); 
 			board.setEnd(page.getEnd());
 			// noti List
 			List<Board> classBoardList = bs.classBoardList(board);
