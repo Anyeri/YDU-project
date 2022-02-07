@@ -160,7 +160,7 @@ public class BoardController {
 		return result;
 	}
 
-	// ***수업 공지사항 게시판 시작***
+	// ***수업 공지사항 게시판 시작*** 
 	// 수업 공지사항 목록
 	@RequestMapping("classNotiList")
 	public String classNotiList(HttpServletRequest request, Board board, String currentPage, Model model) {
