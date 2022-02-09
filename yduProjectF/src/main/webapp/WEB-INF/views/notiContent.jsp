@@ -63,8 +63,8 @@ function backDelete(b_num,b_type) {
                alert("게시물 삭제에 실패하였습니다.");
             }
          }
-      })
-   }   
+      }) 
+   }
 }
 //전체 공지게시판 댓글 수정 Ajax
 function commUpdate(c_num) {
