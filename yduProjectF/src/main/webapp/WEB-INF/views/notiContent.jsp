@@ -196,7 +196,7 @@ function commUpdateForm(c_num){
             <div style="height: 100px"></div>
             <div class="row mt">
                <div class="col-md-12">
-               
+               <!-- update -->
                   <div class="content-panel" style="width: 1250px; margin: 30px;">
                   	 <h2 style="margin: 18px; color: #4B89DC;" >
                         <i class="fa fa-bullhorn"></i><strong>전체 공지사항</strong>
