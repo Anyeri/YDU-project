@@ -165,7 +165,7 @@ public class BoardController {
 	@RequestMapping("classNotiList")
 	public String classNotiList(HttpServletRequest request, Board board, String currentPage, Model model) {
 		HttpSession session = request.getSession();
-		try { 
+		try {
 			int mem_status = (int) session.getAttribute("sessionMem_status");
 			int autority = (int) session.getAttribute("sessionAutority");
 			String id = (String) session.getAttribute("sessionId");
