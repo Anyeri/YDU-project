@@ -1,6 +1,6 @@
 # YDU 학사관리 시스템
 
-## 📝개요
+## 	📌개요
 - **프로젝트명** : YDU 학사관리 시스템 (YD University 학사관리 시스템)
 - **일정** : 21.12.3 ~ 21.12.24(3주) / 유지보수 : 21.12.24 ~
 
@@ -17,3 +17,16 @@
 - **Style sheet**: CSS
 
 ### Architecture
+![아키텍쳐 구성도](https://user-images.githubusercontent.com/47514354/153552691-85401eff-fd38-41af-a331-cf53d7f7c8c2.jpg)
+
+## 	📝내용
+
+### [YDU 학사관리 시스템 PPT link](https://www.slideshare.net/HaileyAn/ydu)
+: 링크에 포함되어 있는 PPT는 다운로드도 가능합니다.
+
+------------
+**1. 구현기능**
+  - 전체 공지사항 게시판
+  - 수업 공지사항 게시판
+  - 대나무숲
+  - 교수진 평가
