@@ -1,6 +1,6 @@
 # http port set
 server:
-  port: 5000
+  port: 8588
   
 # Oracle Connect
 spring:
