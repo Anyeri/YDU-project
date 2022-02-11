@@ -167,7 +167,7 @@ function commUpdateForm(c_num){
    htmls += '<textarea class="form-control" id="c_contentUpdate" style="min-height: 100px; width: 100%" name="c_content"></textarea>';
    htmls += '<td width="165px" style="text-align: center">';
    htmls += '<a href="#" onclick="commUpdate('+c_num+');" class="text-red">[수정]&nbsp;&nbsp;&nbsp;</a>';
-   htmls += '<a href="javascript:void(0)" onclick="location.reload   ();">[취소]</a>';
+   htmls += '<a href="javascript:void(0)" onclick="location.reload();">[취소]</a>';
    htmls += '</td>';
    htmls += '</tr>';
    htmls += '</table>';
@@ -179,13 +179,13 @@ function commUpdateForm(c_num){
 </head>
 <%@include file="header.jsp"%>
 <c:choose>
-   <c:when test="${sessionScope.sessionAutority == 3 }">
+   <c:when test="${sessionScope.sessionAutority == 3}">
       <%@include file="adminSide.jsp"%>
    </c:when>
-   <c:when test="${sessionScope.sessionAutority == 2 }">
+   <c:when test="${sessionScope.sessionAutority == 2}">
       <%@include file="profSide.jsp"%>
    </c:when>
-   <c:when test="${sessionScope.sessionAutority == 1 }">
+   <c:when test="${sessionScope.sessionAutority == 1}">
       <%@include file="stuSide.jsp"%>
    </c:when>
 </c:choose>
@@ -196,10 +196,11 @@ function commUpdateForm(c_num){
             <div style="height: 100px"></div>
             <div class="row mt">
                <div class="col-md-12">
-               <h3 style="margin: 18px; color: #4B89DC;">
-                  &emsp;<i class="fa fa-bullhorn"></i> <strong>전체 공지사항</strong>
-               </h3>
+               
                   <div class="content-panel" style="width: 1250px; margin: 30px;">
+                  	 <h2 style="margin: 18px; color: #4B89DC;" >
+                        <i class="fa fa-bullhorn"></i><strong>전체 공지사항</strong>
+                     </h2>
                      <hr>
                      <!-- 공지사항 목록 --> 
                      <!-- id 를 hidden 에다가 걸어버리면 보안상 문제가 생길 수 있다.

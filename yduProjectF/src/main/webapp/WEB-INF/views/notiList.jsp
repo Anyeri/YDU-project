@@ -60,13 +60,13 @@
 </head>
 <%@include file="header.jsp"%>
 <c:choose>
-   <c:when test="${sessionScope.sessionAutority == 3 }">
+   <c:when test="${sessionScope.sessionAutority == 3}">
       <%@include file="adminSide.jsp"%>
    </c:when>
-   <c:when test="${sessionScope.sessionAutority == 2 }">
+   <c:when test="${sessionScope.sessionAutority == 2}">
       <%@include file="profSide.jsp"%>
    </c:when>
-   <c:when test="${sessionScope.sessionAutority == 1 }">
+   <c:when test="${sessionScope.sessionAutority == 1}">
       <%@include file="stuSide.jsp"%>
    </c:when>
 </c:choose>
