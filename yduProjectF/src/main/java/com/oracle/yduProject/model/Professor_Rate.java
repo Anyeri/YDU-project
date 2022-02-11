@@ -13,7 +13,7 @@ public class Professor_Rate{
 	private String stu_id;//학생아이디
 	private double prof_rates;//교수평점
 	private String rate_content; //교수평가내용
-	private String name;//이름
+	private String name;//이름 join용도
 	
 	// 리스트 조회용
 	private String pro_id;
