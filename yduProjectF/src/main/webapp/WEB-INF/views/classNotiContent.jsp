@@ -203,7 +203,7 @@ function commUpdateForm(c_num){
                   <div class="content-panel" style="width: 1250px; margin: 30px;">
 					<h2 style="margin: 18px; color: #4B89DC;" >
 						<i class="fa fa-bullhorn"></i> <strong>전체 공지사항</strong>
-					</h2>
+					</h2> 
                      <hr>
                      <!-- 공지사항 목록 --> 
                      <!-- id 를 hidden 에다가 걸어버리면 보안상 문제가 생길 수 있다.
