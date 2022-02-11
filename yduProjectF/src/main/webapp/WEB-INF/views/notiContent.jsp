@@ -192,7 +192,7 @@ function commUpdateForm(c_num){
 <body>
    <section id="container">
       <section id="main-content"> 
-         <main>
+         <main>  
             <div style="height: 100px"></div>
             <div class="row mt">
                <div class="col-md-12">
