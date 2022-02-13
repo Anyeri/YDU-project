@@ -188,7 +188,7 @@ function commUpdateForm(c_num){
    <c:when test="${sessionScope.sessionAutority == 1}">
       <%@include file="stuSide.jsp"%>
    </c:when>
-</c:choose>
+</c:choose> 
 <body>
    <section id="container">
       <section id="main-content">  
