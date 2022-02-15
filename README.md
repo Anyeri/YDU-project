@@ -32,5 +32,9 @@
   - 교수진 평가
 
 **2. ERD**
+![image](https://user-images.githubusercontent.com/47514354/154031312-a165a3b7-1c56-4751-9e03-627cf3518922.png)
 
 **3. 공통 코드**
+- 설명: 데이터의 유연성을 높히고 명칭의 일관성을 유지하기 위해 공통 코드를 사용하게 되었습니다. 
+---
+![image](https://user-images.githubusercontent.com/47514354/154031173-cf281584-0394-4efb-8270-8346702b5ad2.png)
