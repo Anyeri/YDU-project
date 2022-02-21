@@ -37,7 +37,7 @@
 //목록으로 돌아가기 버튼
 function backList() {
    location.href="notiList?b_type=1";
-}
+} 
 //수정폼으로 들어가기 버튼
 function backUpd() {
    if(confirm("게시글을 수정 하시겠습니까?")==true){
