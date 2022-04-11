@@ -25,7 +25,7 @@
 ## Architecture
 ![아키텍쳐 구성도](https://user-images.githubusercontent.com/47514354/153552691-85401eff-fd38-41af-a331-cf53d7f7c8c2.jpg)
 
-## 	📝내용
+## 	📝내용 
 
 ### [YDU 학사관리 시스템 PPT link](https://www.slideshare.net/HaileyAn/ydu)
 : 링크에 포함되어 있는 포트폴리오가 잘 안보이실 경우 다운로드를 통한 자세한 확인이 가능합니다.
