@@ -23,10 +23,6 @@
 ## ✨ Demo
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/47514354/158320457-adc25ae7-0bbd-4ea6-ba38-fa25555270d2.gif)
 
-
-## Architecture
-![아키텍쳐 구성도](https://user-images.githubusercontent.com/47514354/153552691-85401eff-fd38-41af-a331-cf53d7f7c8c2.jpg)
-
 ## 	📝내용 
 
 ### [YDU 학사관리 시스템 PPT link](https://www.slideshare.net/HaileyAn/ydu)
