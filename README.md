@@ -7,7 +7,7 @@
 
 ## 🛠️개발환경 및 사용기술 
 - **O/S**: Windows 10
-- **Server**: Apache Tomcat 9
+- **Server**: Apache Tomcat 9 
 - **DB**: OracleSQL 4.1.1ver
 - **FrameWork/Flatform**: STS3-3.9.14ver, Springboot, Bootstrap, Jquery, Mybatis, Aajx, Lombok
 - **Programming Language**: JAVA
